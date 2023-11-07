@@ -9,8 +9,8 @@ function generatePassword() {
   //password character variables, at least one category is required
   var lowerCase = 'abcdefghijklmnopqrstuvwxyz';
   var upperCase = lowerCase.toUpperCase();
-  //var numbers = '0123456789';
-  //var specialCharacters =' '!@#$%^&*?';
+  var numericCharacters = '0123456789';
+  var specialCharacters = '!@#$%^&*?';
   var lengthInput = 10;
   var possibleCharacters = "";
 
@@ -29,8 +29,8 @@ function generatePassword() {
     hasLowercase = false;
   }
 
-  //!! means or ! means true
-  if (!hasLowercase || !hasUppercase) {
+  //|| means or ! means true
+  if (!hasLowercase || !hasUppercase || !hasSpecial || !hasNumeric) {
     alert("Please choose at least one character type.");
     return;
   }
@@ -44,6 +44,13 @@ function generatePassword() {
     possibleCharacters += upperCase;
   }
 
+  if (hasSpecial) {
+    possibleCharacters += specialCharacters;
+  }
+
+  if (hasNumeric) {
+    possibleCharacters += numericCharacters;
+  }
   //password should be generated and displayed
 
   for (var i = 0; i < lengthInput; i++) {
