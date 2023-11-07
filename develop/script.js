@@ -13,8 +13,20 @@ function generatePassword() {
   var specialCharacters = '!@#$%^&*?';
   var lengthInput = 10;
   //booleans for inputs
-  var hasLowercase = true;
-  var hasUppercase = true;
+
+  var lowerCaseQ = confirm("Would you like to use lowercase letters?");
+  if(lowerCaseQ === true) {
+    var hasLowercase = true;
+  } else {
+    var hasLowercase = false;
+  }
+  var upperCaseQ = confirm("Would you like to use uppercase letters?");
+  if(upperCaseQ === true) {
+    var hasUppercase = true;
+  } else {
+    var hasLowercase = false;
+  }
+
   var hasNumeric = false;
   var hasSpecial = false;
 
@@ -40,9 +52,6 @@ function generatePassword() {
    if (hasSpecial) {
     possibleCharacters += specialCharacters;
    }
-
-   //prompt q's
-   //var lowerCaseQ = confirm("Would you like to use lowercase letters?");
    //var upperCaseQ = confirm("Would you like to use uppercase letters?");
    //var numbersQ = confirm("Would you like to use numbers?");
    //var specialCharactersQ = confirm("Would you like to use special characters?");
@@ -55,21 +64,6 @@ function generatePassword() {
   }
    console.log("password:");
    return "password";
-}
-
-
- //following criteria
- if (lowerCaseQ === false && upperCaseQ === false && numbersQ === false && specialCharactersQ === false) {
-  return "You must select at least one character type to meet password criteria.";
-  };
-
-  //generating passwords
-  if(lowerCaseQ === true && upperCaseQ === false && numbersQ === false && specialCharactersQ === false) {
-    
-  }
-
-
-
 }
 
 // Write password to the #password input
