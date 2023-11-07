@@ -22,6 +22,7 @@ function generatePassword() {
   } else {
     hasLowercase = false;
   }
+
   var upperCaseQ = confirm("Would you like to use uppercase letters?");
   if (upperCaseQ === true) {
     var hasUppercase = true;
@@ -29,8 +30,22 @@ function generatePassword() {
     hasLowercase = false;
   }
 
-  //|| means or ! means true
-  if (!hasLowercase || !hasUppercase || !hasSpecial || !hasNumeric) {
+  var numericQ = confirm("Would you like to use numeric characters?");
+  if (numericQ === true) {
+    var hasNumeric = true;
+  } else {
+  hasNumeric = false;
+  }
+
+  var specialQ = confirm("Would you like to use special characters?");
+  if (specialQ === true) {
+    var hasSpecial = true;
+  } else {
+  hasSpecial = false;
+  }
+  
+  //|| means or ! means true && means and
+  if (!hasLowercase && !hasUppercase && !hasSpecial && !hasNumeric) {
     alert("Please choose at least one character type.");
     return;
   }
