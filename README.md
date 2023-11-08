@@ -5,7 +5,7 @@ A password generator that will take the user through a series of prompts, includ
 
 ## Screenshots
 
-![Screenshot of top half of modified Horiseon website](assets/screenshots/fancyPasswordMaker.png)
+![Screenshot of password generator in use](assets/screenshots/fancyPasswordMaker.png)
 
 
 ## https://rachaelkstokes.github.io/Fancy.Password.Maker/
