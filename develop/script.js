@@ -11,11 +11,17 @@ function generatePassword() {
   var upperCase = lowerCase.toUpperCase();
   var numericCharacters = '0123456789';
   var specialCharacters = '!@#$%^&*?';
-  var lengthInput = 10;
   var possibleCharacters = "";
 
   //prompts for password criteria, input required between 8 and 28 characters
   //All input should be validated
+
+  var lengthInput = prompt("Choose a password length between 8 and 128 characters.");
+  if (lengthInput < 8 || lengthInput > 128) {
+    alert("Please choose a password length between 8 and 128 characters.");
+    return;
+  }
+  
   var lowerCaseQ = confirm("Would you like to use lowercase letters?");
   if (lowerCaseQ === true) {
     var hasLowercase = true;
@@ -43,7 +49,7 @@ function generatePassword() {
   } else {
   hasSpecial = false;
   }
-  
+
   //|| means or ! means true && means and
   if (!hasLowercase && !hasUppercase && !hasSpecial && !hasNumeric) {
     alert("Please choose at least one character type.");
