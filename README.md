@@ -5,7 +5,7 @@ A password generator that will take the user through a series of prompts, includ
 
 ## Screenshots
 
-![Screenshot of password generator in use](assets\Screenshots\fancyPasswordMaker.png)
+![Screenshot of password generator in use](\assets\fancyPasswordMaker.png)
 
 
 ## https://rachaelkstokes.github.io/Fancy.Password.Maker/
