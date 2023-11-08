@@ -8,4 +8,4 @@ A password generator that will take the user through a series of prompts, includ
 ![Screenshot of password generator in use](\assets\fancyPasswordMaker.png)
 
 
-## https://rachaelkstokes.github.io/Fancy.Password.Maker/
+## [liveURL](https://rachaelkstokes.github.io/Fancy.Password.Maker/)
